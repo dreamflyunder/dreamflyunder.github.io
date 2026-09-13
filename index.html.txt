@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>梦飞之下 · 个人小报</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f4ecd8;
+            color: #2c2c2c;
+            font-family: 'Georgia', '宋体', serif;
+            padding: 40px 20px;
+            line-height: 1.8;
+        }
+        .newspaper {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fdf6e3;
+            padding: 40px;
+            border: 1px solid #d3c6a6;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 4px double #2c2c2c;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 3.5rem;
+            letter-spacing: 8px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        .header .date {
+            font-size: 0.9rem;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #2c2c2c;
+            border-bottom: 1px solid #2c2c2c;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .article {
+            border-bottom: 1px dashed #d3c6a6;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .article h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            border-left: 4px solid #8b0000;
+            padding-left: 10px;
+        }
+        .article p {
+            font-size: 0.95rem;
+            text-indent: 2em;
+            color: #444;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            border-top: 4px double #2c2c2c;
+            padding-top: 15px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="newspaper">
+        <div class="header">
+            <h1>梦飞之下</h1>
+            <div class="date">
+                <span>第 001 期</span>
+                <span>主编：梦飞之下</span>
+                <span id="today">2026年9月13日</span>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="article">
+                <h2>📌 发刊词</h2>
+                <p>这里是小报的第一篇文章。你可以在这里写你最近的心情、看到的好书，或者任何你想记录的事情。小报的好处就是排版自由，每次更新就像发行新的一期报纸。</p>
+            </div>
+
+            <div class="article">
+                <h2>📖 最近在读</h2>
+                <p>比如你可以写：“最近在读《XXX》，书里说……” 这种碎碎念非常适合用小报的形式展现。</p>
+            </div>
+
+            <div class="article">
+                <h2>🎵 最近在听</h2>
+                <p>“本周单曲循环的是 XXX，适合阴雨天听。”</p>
+            </div>
+
+            <div class="article">
+                <h2>✨ 小小愿望</h2>
+                <p>“希望下个月能学会自己写代码修改网页的排版。”</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            梦飞之下 · 个人小报 | 每月更新 | Dreams fly under.
+        </div>
+    </div>
+
+    <script>
+        const today = new Date();
+        const dateStr = today.getFullYear() + "年" + (today.getMonth()+1) + "月" + today.getDate() + "日";
+        document.getElementById("today").innerText = dateStr;
+    </script>
+</body>
+</html>
